@@ -9,17 +9,18 @@ using Newtonsoft.Json.Linq;
 
 namespace MovieAPI.Controllers
 {
-    public class HomeController : Controller
-    {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-		public List<JToken> GetTitles()
+	public class HomeController : Controller
+	{
+		public ActionResult Index()
 		{
 
-			string url = "https://api.themoviedb.org/3/movie/550?api_key=452c4e31f03a234970a8f9e1c564a52f";
+			return View();
+		}
+
+		public List<JToken> MovieInfo()
+		{
+
+			string url = " http://www.omdbapi.com/?i=tt3896198&apikey=e3c05793";
 
 			HttpWebRequest Request = WebRequest.CreateHttp(url);
 
@@ -35,12 +36,13 @@ namespace MovieAPI.Controllers
 			sr.Close();
 			//Now we're moving into parsing
 			//JToken parses the JSon info into C# natural language.
-			JToken titleData = JToken.Parse(APIText);
+			JToken MoviesData = JToken.Parse(APIText);
 
 			//Making a string that goes into the website 
 			//and looks for the name of the field in the API
-			List<JToken> titles = titleData["data"]["children"].ToList();
+			List<JToken> AllInfo = MoviesData["p"]["exports"].ToList();
 
-			return titles;
+			return AllInfo;
 		}
+	}
 }
