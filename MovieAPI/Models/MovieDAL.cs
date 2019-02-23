@@ -16,11 +16,12 @@ namespace MovieAPI.Models
 
             StreamReader rd = new StreamReader(response.GetResponseStream());
             string data = rd.ReadToEnd();
+            rd.Close();
 
             return data;
         }
 
-        public static MovieDB GetStuffed(int i)
+        public static MovieDB GetMovie(string i)
         {
             string output = GetData("http://www.omdbapi.com/?i=tt3896198&apikey=e3c05793");
             MovieDB movie = new MovieDB(output, i);

@@ -9,22 +9,24 @@ namespace MovieAPI.Models
 {
     public class MovieDB
     {
-        [Key]
-        public int ID { get; set; }
+        //[Key]
+        //public int ID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Rating { get; set; }
         public string ReleaseDate { get; set; }
 
-        public MovieDB(string APIText, int i)
+        public MovieDB(string APIText, string i)
         {
             JObject movieJson = JObject.Parse(APIText);
 
-            List<JToken> movies = movieJson["info"].ToList();
+            List<JToken> movies = movieJson["paths"].ToList();
 
-            JToken movie = movies[i];
+            JToken movie = movies[0];
 
             Title = movie["title"].ToString();
-        }        
+        }
+
+        public MovieDB() { }
     }
 }

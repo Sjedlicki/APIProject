@@ -12,7 +12,7 @@ namespace MovieAPI.Controllers
     {
         public ActionResult Index()
         {
-            MovieDB movie = new MovieDAL.GetStuffed(0);
+            MovieDB movie = MovieDAL.GetMovie("tt0096438");
 
             return View(movie);
         }
