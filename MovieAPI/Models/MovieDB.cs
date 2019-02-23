@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 
 namespace MovieAPI.Models
 {
@@ -12,19 +13,24 @@ namespace MovieAPI.Models
         //[Key]
         //public int ID { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
-        public string Rating { get; set; }
-        public string ReleaseDate { get; set; }
+        public string Year { get; set; }
+        public string Genre { get; set; }
+        public string Metascore { get; set; }
+        
 
-        public MovieDB(string APIText, string i)
+        public MovieDB(string APIText)
         {
-            JObject movieJson = JObject.Parse(APIText);
+            var movieJson = JObject.Parse(APIText).ToString();
 
-            List<JToken> movies = movieJson["paths"].ToList();
+            JavaScriptSerializer oJS = new JavaScriptSerializer();
+            MovieDB mov = new MovieDB();
 
-            JToken movie = movies[0];
+            mov = oJS.Deserialize<MovieDB>(movieJson);
 
-            Title = movie["title"].ToString();
+            Title = mov.Title;
+            Year = mov.Year;
+            Genre = mov.Genre;
+            Metascore = mov.Metascore;
         }
 
         public MovieDB() { }
