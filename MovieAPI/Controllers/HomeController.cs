@@ -12,17 +12,9 @@ namespace MovieAPI.Controllers
     {
         public ActionResult Index()
         {
-            MovieDB movie = MovieDAL.GetMovie("tt0096438");
+            MovieDB movie = MovieDAL.GetMovie();
 
             return View(movie);
         }
-
-        //public ActionResult Display()
-        //{
-        //    List<JToken> display = MovieInfo();
-
-        //    ViewBag.Info = display;
-        //    return View();
-        //}
     }
 }

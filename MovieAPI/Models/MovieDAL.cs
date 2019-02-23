@@ -9,6 +9,7 @@ namespace MovieAPI.Models
 {
     public class MovieDAL
     {
+
         public static string GetData(string url)
         {
             HttpWebRequest request = WebRequest.CreateHttp(url);
@@ -21,10 +22,13 @@ namespace MovieAPI.Models
             return data;
         }
 
-        public static MovieDB GetMovie(string i)
+        public static MovieDB GetMovie()
         {
-            string output = GetData("http://www.omdbapi.com/?i=tt3896198&apikey=e3c05793");
-            MovieDB movie = new MovieDB(output, i);
+            string apikey = "&apikey=e3c05793";
+            string movieName = "tt0144084";
+
+            string output = GetData($"http://www.omdbapi.com/?i={movieName}{apikey}");
+            MovieDB movie = new MovieDB(output);
             return movie;
         }
     }
