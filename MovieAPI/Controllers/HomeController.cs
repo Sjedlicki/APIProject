@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MovieAPI.Models;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +12,17 @@ namespace MovieAPI.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            MovieDB movie = MovieDAL.GetMovie("tt0096438");
+
+            return View(movie);
         }
+
+        //public ActionResult Display()
+        //{
+        //    List<JToken> display = MovieInfo();
+
+        //    ViewBag.Info = display;
+        //    return View();
+        //}
     }
 }
