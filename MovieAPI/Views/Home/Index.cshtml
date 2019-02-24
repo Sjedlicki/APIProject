@@ -1,7 +1,7 @@
 ﻿@model MovieAPI.Models.MovieModel
-@using MovieAPI.Models;
+@model MovieAPI.Models.MovieDB
 
-<<<<<<< HEAD
+
 <p><img src="@Model.Poster" width="300" height="360" /><div id="plot">@Model.Plot</div></p>
 <h2 id="title">@Model.Title</h2>
 <div id="theBody">
@@ -11,8 +11,6 @@
 </div>
 <p id="desc">Description</p>
 
-=======
-<<<<<<< HEAD
 @using (Html.BeginForm("Search", "Home", FormMethod.Post))
 {
     <label for="Title" class="form-control">Search by title</label>
@@ -30,11 +28,3 @@
         <p>Poster: <img src="@item.Poster" /></p>
     </div>
 }
-=======
-@Model.Title
-@Model.Genre
-@Model.Metascore
-@Model.Year
-@Model.Plot
->>>>>>> master
->>>>>>> Mauricio
