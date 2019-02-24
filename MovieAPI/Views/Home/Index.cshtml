@@ -1,6 +1,7 @@
 ﻿@model MovieAPI.Models.MovieModel
 @using MovieAPI.Models;
 
+<<<<<<< HEAD
 @using (Html.BeginForm("Search", "Home", FormMethod.Post))
 {
     <label for="Title" class="form-control">Search by title</label>
@@ -18,3 +19,10 @@
         <p>Poster: <img src="@item.Poster" /></p>
     </div>
 }
+=======
+@Model.Title
+@Model.Genre
+@Model.Metascore
+@Model.Year
+@Model.Plot
+>>>>>>> master
