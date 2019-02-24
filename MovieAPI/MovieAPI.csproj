@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Models\MovieDAL.cs" />
     <Compile Include="Models\MovieDB.cs" />
+    <Compile Include="Models\MovieModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

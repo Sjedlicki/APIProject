@@ -14,10 +14,18 @@ namespace MovieAPI.Models
         //public int ID { get; set; }
         public string Title { get; set; }
         public string Year { get; set; }
+<<<<<<< HEAD
+        public string ImdbID { get; set; }
+        public string Poster { get; set; }
+=======
         public string Genre { get; set; }
         public string Metascore { get; set; }
         public string Plot { get; set; }
+<<<<<<< HEAD
 		public string Poster { get; set; }
+=======
+>>>>>>> master
+>>>>>>> Mauricio
         
 
         public MovieDB(string APIText)
@@ -31,10 +39,18 @@ namespace MovieAPI.Models
 
             Title = mov.Title;
             Year = mov.Year;
+<<<<<<< HEAD
+            ImdbID = mov.ImdbID;
+            Poster = mov.Poster;
+=======
             Genre = mov.Genre;
             Metascore = mov.Metascore;
             Plot = mov.Plot;
+<<<<<<< HEAD
 			Poster = mov.Poster;
+=======
+>>>>>>> master
+>>>>>>> Mauricio
         }
 
         public MovieDB() { }
