@@ -17,6 +17,8 @@ namespace MovieAPI.Models
         public string Genre { get; set; }
         public string Metascore { get; set; }
         public string Plot { get; set; }
+        public string ImdbID { get; set; }
+        public string Poster { get; set; }
         
 
         public MovieDB(string APIText)
@@ -33,6 +35,9 @@ namespace MovieAPI.Models
             Genre = mov.Genre;
             Metascore = mov.Metascore;
             Plot = mov.Plot;
+            ImdbID = mov.ImdbID;
+            Poster = mov.Poster;
+
         }
 
         public MovieDB() { }

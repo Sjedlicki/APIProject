@@ -73,7 +73,6 @@ C:\git\MovieAPI\MovieAPI\bin\Antlr3.Runtime.pdb
 C:\git\MovieAPI\MovieAPI\bin\System.Diagnostics.DiagnosticSource.xml
 C:\git\MovieAPI\MovieAPI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\git\MovieAPI\MovieAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csprojAssemblyReference.cache
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csproj.CoreCompileInputs.cache
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csproj.CopyComplete
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.dll
