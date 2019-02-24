@@ -1,23 +1,11 @@
 ﻿@model MovieAPI.Models.MovieModel
-@model MovieAPI.Models.MovieDB
-
-
-<p><img src="@Model.Poster" width="300" height="360" /><div id="plot">@Model.Plot</div></p>
-<h2 id="title">@Model.Title</h2>
-<div id="theBody">
-	<p>Genre: @Model.Genre</p>
-	<p>Metascore: @Model.Metascore</p>
-	<p>Year: @Model.Year</p>
-</div>
-<p id="desc">Description</p>
-
+@using MovieAPI.Models;
 @using (Html.BeginForm("Search", "Home", FormMethod.Post))
 {
     <label for="Title" class="form-control">Search by title</label>
     @Html.TextBox("Title", null, new { @class = "form-control" })
     <input type="submit" class="form-control" />
 }
-
 <p>Movie Count: @Model.Movies.Count</p>
 @foreach (MovieDB item in Model.Movies)
 {
