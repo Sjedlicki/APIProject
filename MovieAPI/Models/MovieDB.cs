@@ -29,8 +29,8 @@ namespace MovieAPI.Models
 
             Title = mov.Title;
             Year = mov.Year;
-            Genre = mov.Genre;
-            Metascore = mov.Metascore;
+            ImdbID = mov.ImdbID;
+            Poster = mov.Poster;
         }
 
         public MovieDB() { }
