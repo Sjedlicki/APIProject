@@ -25,7 +25,9 @@ namespace MovieAPI.Models
         public static MovieDB GetMovie()
         {
             string apikey = "&apikey=e3c05793";
-            string movieName = "Cool Runnings".Trim();
+
+            //PASS USER INPUT DATA HERE!!
+            string movieName = "american psycho".Trim();
 
             string output = GetData($"http://www.omdbapi.com/?t={movieName}{apikey}");
             MovieDB movie = new MovieDB(output);
