@@ -16,5 +16,12 @@ namespace MovieAPI.Controllers
 
             return View(movie);
         }
+
+		public ActionResult ChoseMovies()
+		{
+			MovieDB movie = MovieDAL.GetMovie();
+
+			return View(movie);
+		}
     }
 }

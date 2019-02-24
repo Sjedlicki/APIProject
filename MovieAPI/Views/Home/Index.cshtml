@@ -1,7 +1,11 @@
 ﻿@model MovieAPI.Models.MovieDB
 
-@Model.Title
-@Model.Genre
-@Model.Metascore
-@Model.Year
-@Model.Plot
+<p><img src="@Model.Poster" width="300" height="360" /><div id="plot">@Model.Plot</div></p>
+<p>Title: @Model.Title</p>
+
+<p>Genre: @Model.Genre</p>
+<p>Metascore: @Model.Metascore</p>
+<p>Year: @Model.Year</p>
+
+<p>Description</p>
+<p>@Model.Plot</p>
