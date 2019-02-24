@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MovieAPI.Models;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,6 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace MovieAPI.Controllers
 {
+<<<<<<< HEAD
 	public class HomeController : Controller
 	{
 		public ActionResult Index()
@@ -45,4 +48,22 @@ namespace MovieAPI.Controllers
 			return AllInfo;
 		}
 	}
+=======
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            MovieDB movie = MovieDAL.GetMovie();
+
+            return View(movie);
+        }
+
+		public ActionResult ChoseMovies()
+		{
+			MovieDB movie = MovieDAL.GetMovie();
+
+			return View(movie);
+		}
+    }
+>>>>>>> 1a4f639fc45fc0b8b6eb79e729eb8e9bb9f98966
 }
