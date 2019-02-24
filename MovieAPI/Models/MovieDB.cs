@@ -16,6 +16,7 @@ namespace MovieAPI.Models
         public string Year { get; set; }
         public string Genre { get; set; }
         public string Metascore { get; set; }
+        public string Plot { get; set; }
         
 
         public MovieDB(string APIText)
@@ -31,6 +32,7 @@ namespace MovieAPI.Models
             Year = mov.Year;
             Genre = mov.Genre;
             Metascore = mov.Metascore;
+            Plot = mov.Plot;
         }
 
         public MovieDB() { }
