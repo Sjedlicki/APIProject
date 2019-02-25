@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using Newtonsoft.Json.Linq;
+using MovieAPI.Controllers;
 
 namespace MovieAPI.Models
 {
@@ -66,7 +67,8 @@ namespace MovieAPI.Models
 
 		public static void GetOut()
 		{
-
+			HomeController hc = new HomeController();
+			hc.Error();
 		}
     }
 }

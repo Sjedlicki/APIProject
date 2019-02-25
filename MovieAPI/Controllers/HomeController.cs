@@ -35,5 +35,11 @@ namespace MovieAPI.Controllers
 				return View("Index", model);
 			}
         }
+
+		public ActionResult Error()
+		{
+			ViewBag.Error = "Please input a title!";
+			return View();
+		}
     }
 }
