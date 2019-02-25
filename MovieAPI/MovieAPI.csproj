@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Models\MovieDAL.cs" />
     <Compile Include="Models\MovieDB.cs" />
+    <Compile Include="Models\MovieModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +145,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\favButton1.png" />
+    <Content Include="Images\favButton2.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

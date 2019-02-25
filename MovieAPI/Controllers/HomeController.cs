@@ -7,6 +7,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Data;
+
 
 
 namespace MovieAPI.Controllers
@@ -21,11 +23,11 @@ namespace MovieAPI.Controllers
             return View(movie);
         }
 
-		public ActionResult ChoseMovies()
-		{
-			MovieDB movie = MovieDAL.GetMovie();
+        public ActionResult ChoseMovies()
+        {
+            MovieDB movie = MovieDAL.GetMovie();
 
-			return View(movie);
-		}
+            return View(movie);
+        }
     }
 }

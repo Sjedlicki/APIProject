@@ -14,11 +14,11 @@ namespace MovieAPI.Models
         //public int ID { get; set; }
         public string Title { get; set; }
         public string Year { get; set; }
+        public string ImdbID { get; set; }
+        public string Poster { get; set; }
         public string Genre { get; set; }
         public string Metascore { get; set; }
-        public string Plot { get; set; }
-		public string Poster { get; set; }
-        
+        public string Plot { get; set; }     
 
         public MovieDB(string APIText)
         {
@@ -31,10 +31,11 @@ namespace MovieAPI.Models
 
             Title = mov.Title;
             Year = mov.Year;
+            ImdbID = mov.ImdbID;
+            Poster = mov.Poster;
             Genre = mov.Genre;
             Metascore = mov.Metascore;
             Plot = mov.Plot;
-			Poster = mov.Poster;
         }
 
         public MovieDB() { }
