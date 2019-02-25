@@ -274,6 +274,8 @@
     <Content Include="Views\MovieDBs\Edit.cshtml" />
     <Content Include="Views\MovieDBs\Error.cshtml" />
     <Content Include="Views\MovieDBs\Index.cshtml" />
+    <Content Include="Views\MovieDBs\OneMovie.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

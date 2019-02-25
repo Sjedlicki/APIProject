@@ -24,9 +24,16 @@ namespace MovieAPI.Controllers
 
         public ActionResult Search(MovieModel model)
         {
-            model.Movies = MovieDAL.SearchByTitle(model.Title);
-
-            return View("Index", model);
+			if (model.Title == null)
+			{
+				ViewBag.Error = "No title, try again!";
+				return View("Error");
+			}
+			else
+			{
+				model.Movies = MovieDAL.SearchByTitle(model.Title);
+				return View("Index", model);
+			}
         }
     }
 }

@@ -53,16 +53,3 @@ textarea {
 	top:-150px;
 	font-size:.2in;
 }
-.favButton {
-	cursor:pointer;
-	border: none;
-	width: 50px;
-	height: 50px;
-	position:relative;
-	top:-200px;
-	background: url('../Images/favButton1.png')no-repeat ;
-}
-
-.favButton:active{
-		background: url('../Images/favButton2.png') no-repeat;
-	}
