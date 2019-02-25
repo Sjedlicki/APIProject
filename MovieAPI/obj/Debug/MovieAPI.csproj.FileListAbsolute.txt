@@ -81,3 +81,4 @@ C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csproj.CoreCompileInputs.cache
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csproj.CopyComplete
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.dll
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.pdb
+C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csprojAssemblyReference.cache
