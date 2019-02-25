@@ -1,7 +1,10 @@
 ﻿@model MovieAPI.Models.MovieModel
 @using MovieAPI.Models;
 
+
 <link rel="stylesheet" href="../../Content/Index.css">
+
+
 @using (Html.BeginForm("Search", "Home", FormMethod.Post))
 {
     <label for="Title" class="form-control">Search by title</label>
@@ -12,10 +15,15 @@
 <p>Movie Count: @Model.Movies.Count</p>
 @foreach (MovieDB item in Model.Movies)
 {
+
     <div class="info">
         <p><img src="@item.Poster" id="movieposter"/></p>
         <p>Title: @item.Title</p>
         <p>Year: @item.Year</p>
-        <p>IMDB ID: @item.ImdbID</p>
+        <p>Genre: @item.Genre</p>
+        <p>Rating: @item.Metascore</p>        
+        <p>Plot: @item.Plot</p>
     </div>
+
+    <a href="/MovieDBs/Favorites?ImdbID=@item.ImdbID">Add to Favorites</a>
 }

@@ -22,3 +22,47 @@ select,
 textarea {
     max-width: 280px;
 }
+#plot {
+	text-align:center;
+	position:relative;
+	left: 250px;
+	top:-175px;
+	padding-right:2in;	
+	padding-left:2in;
+	font-size:.2in;
+	
+}
+
+#desc {
+	text-align: center;
+	position: relative;
+	left: 250px;
+	top: -530px;
+	font-size:.5in
+}
+
+#title {
+	text-align: center;
+	position: relative;
+	left: 250px;
+	top: -450px;
+	font-size: .5in
+}
+#theBody {
+	position:relative;
+	top:-150px;
+	font-size:.2in;
+}
+.favButton {
+	cursor:pointer;
+	border: none;
+	width: 50px;
+	height: 50px;
+	position:relative;
+	top:-200px;
+	background: url('../Images/favButton1.png')no-repeat ;
+}
+
+.favButton:active{
+		background: url('../Images/favButton2.png') no-repeat;
+	}

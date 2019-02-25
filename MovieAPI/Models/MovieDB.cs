@@ -5,13 +5,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
+using System.Data.Entity;
 
 namespace MovieAPI.Models
 {
     public class MovieDB
     {
-        //[Key]
-        //public int ID { get; set; }
+        [Key]
+        public int ID { get; set; }
         public string Title { get; set; }
         public string Year { get; set; }
         public string ImdbID { get; set; }
@@ -19,7 +20,6 @@ namespace MovieAPI.Models
         public string Genre { get; set; }
         public string Metascore { get; set; }
         public string Plot { get; set; }
-        
 
         public MovieDB(string APIText)
         {
@@ -40,5 +40,10 @@ namespace MovieAPI.Models
         }
 
         public MovieDB() { }
+    }
+
+    public class FavoriteDBContext : DbContext
+    {
+        public DbSet<MovieDB> Favorite { get; set; }
     }
 }
