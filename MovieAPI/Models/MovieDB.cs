@@ -14,7 +14,7 @@ namespace MovieAPI.Models
         [Key]
         public int ID { get; set; }
         public string Title { get; set; }
-        public int Year { get; set; }
+        public string Year { get; set; }
         public string ImdbID { get; set; }
         public string Poster { get; set; }
         public string Genre { get; set; }

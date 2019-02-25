@@ -30,13 +30,17 @@ namespace MovieAPI.Models
 
             string apikey = "&apikey=e3c05793";
             string output = GetData($"http://www.omdbapi.com/?s={title}{apikey}");            
-            var token = JToken.Parse(output);
+            JToken token = JToken.Parse(output);
+
             var list = token.SelectToken("Search");
+
+            int i = 0;
             foreach (var item in list)
             {
-
-                MovieDB movie = new MovieDB(item.ToString());
+                string imdbd = token["Search"][i]["imdbID"].ToString();
+                MovieDB movie = GetMovie(imdbd);
                 results.Add(movie);
+                i++;
             }
             return results;
         }
