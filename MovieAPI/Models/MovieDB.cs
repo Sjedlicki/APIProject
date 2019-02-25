@@ -41,4 +41,9 @@ namespace MovieAPI.Models
 
         public MovieDB() { }
     }
+
+    public class FavoriteDBContext : DbContext
+    {
+        public DbSet<MovieDB> Favorite { get; set; }
+    }
 }
