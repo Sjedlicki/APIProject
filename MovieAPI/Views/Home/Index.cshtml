@@ -1,11 +1,24 @@
-﻿@model MovieAPI.Models.MovieDB
+﻿@model MovieAPI.Models.MovieModel
+@using MovieAPI.Models;
 
-<p><img src="@Model.Poster" width="300" height="360" /><div id="plot">@Model.Plot</div></p>
-<h2 id="title">@Model.Title</h2>
-<div id="theBody">
-	<p>Genre: @Model.Genre</p>
-	<p>Metascore: @Model.Metascore</p>
-	<p>Year: @Model.Year</p>
-</div>
-<p id="desc">Description</p>
-<input type="image" class="favButton" img src="~/Images/favButton1.png"  /> 
+@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+{
+    <label for="Title" class="form-control">Search by title</label>
+    @Html.TextBox("Title", null, new { @class = "form-control" })
+    <input type="submit" class="form-control" />
+}
+<p>Movie Count: @Model.Movies.Count</p>
+@foreach (MovieDB item in Model.Movies)
+{
+    <div class="form-group">
+        <p>Title: @item.Title</p>
+        <p>Year: @item.Year</p>
+        <p>Genre: @item.Genre</p>
+        <p>Rating: @item.Metascore</p>
+        <p>Poster: <img src="@item.Poster" /></p>
+        <p>Plot: @item.Plot</p>
+    </div>
+
+    <a href="/MovieDBs/Favorites?ImdbID=@item.ImdbID">Add to Favorites</a>
+}
+

@@ -23,30 +23,35 @@ namespace MovieAPI.Models
             return data;
         }
 
-        public static List<MovieDB> SearchByTitle(string title)
+        public static List<MovieDB> SearchByTitle(string titled)
         {
+            string title = titled.Trim();
             List<MovieDB> results = new List<MovieDB>();
 
             string apikey = "&apikey=e3c05793";
-            string output = GetData($"http://www.omdbapi.com/?s={title}{apikey}");
-            var token = JToken.Parse(output);
+            string output = GetData($"http://www.omdbapi.com/?s={title}{apikey}");            
+            JToken token = JToken.Parse(output);
+
             var list = token.SelectToken("Search");
+
+            int i = 0;
             foreach (var item in list)
             {
-                MovieDB movie = new MovieDB(item.ToString());
+                string imdbd = token["Search"][i]["imdbID"].ToString();
+                MovieDB movie = GetMovie(imdbd);
                 results.Add(movie);
+                i++;
             }
             return results;
         }
 
-        public static MovieDB GetMovie()
+        public static MovieDB GetMovie(string imdbID)
         {
             string apikey = "&apikey=e3c05793";
 
-            //PASS USER INPUT DATA HERE!!
-            string movieName = "american psycho".Trim();
+            string movieName = imdbID;
 
-            string output = GetData($"http://www.omdbapi.com/?t={movieName}{apikey}");
+            string output = GetData($"http://www.omdbapi.com/?i={movieName}{apikey}");
             MovieDB movie = new MovieDB(output);
             return movie;
         }

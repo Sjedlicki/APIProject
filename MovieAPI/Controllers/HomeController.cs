@@ -13,21 +13,20 @@ using System.Data;
 
 namespace MovieAPI.Controllers
 {
-
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            MovieDB movie = MovieDAL.GetMovie();
-
-            return View(movie);
+            var model = new MovieModel();
+            model.Movies = new List<MovieDB>();
+            return View(model);
         }
 
-        public ActionResult ChoseMovies()
+        public ActionResult Search(MovieModel model)
         {
-            MovieDB movie = MovieDAL.GetMovie();
+            model.Movies = MovieDAL.SearchByTitle(model.Title);
 
-            return View(movie);
+            return View("Index", model);
         }
     }
 }
