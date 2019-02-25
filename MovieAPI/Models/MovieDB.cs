@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
+using System.Data.Entity;
 
 namespace MovieAPI.Models
 {
@@ -14,12 +15,20 @@ namespace MovieAPI.Models
         [Key]
         public int ID { get; set; }
         public string Title { get; set; }
+<<<<<<< HEAD
         public string Year { get; set; }
+=======
+        public int Year { get; set; }
+        public string ImdbID { get; set; }
+>>>>>>> master
         public string Poster { get; set; }
         public string Genre { get; set; }
         public string Metascore { get; set; }
         public string Plot { get; set; }
+<<<<<<< HEAD
         public string ImdbID { get; set; }
+=======
+>>>>>>> master
 
         public MovieDB(string APIText)
         {

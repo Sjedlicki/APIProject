@@ -23,8 +23,9 @@ namespace MovieAPI.Models
             return data;
         }
 
-        public static List<MovieDB> SearchByTitle(string title)
+        public static List<MovieDB> SearchByTitle(string titled)
         {
+            string title = titled.Trim();
             List<MovieDB> results = new List<MovieDB>();
 
             string apikey = "&apikey=e3c05793";
