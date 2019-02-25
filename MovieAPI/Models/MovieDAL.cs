@@ -28,7 +28,6 @@ namespace MovieAPI.Models
 			
             string title = titled.Trim();
             List<MovieDB> results = new List<MovieDB>();
-			string NoMovie = "No movies by that name";
             string apikey = "&apikey=e3c05793";
             string output = GetData($"http://www.omdbapi.com/?s={title}{apikey}");            
             JToken token = JToken.Parse(output);

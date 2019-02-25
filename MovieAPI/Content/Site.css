@@ -53,3 +53,12 @@ textarea {
 	top:-150px;
 	font-size:.2in;
 }
+
+#Error {
+	text-align:center;
+}
+
+#404 {
+	width: 100%;
+	height: 100%;
+}
