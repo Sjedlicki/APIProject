@@ -38,5 +38,16 @@ namespace MovieAPI.Models
             }
             return results;
         }
+
+        public static MovieDB GetMovie(string imdbID)
+        {
+            string apikey = "&apikey=e3c05793";
+
+            string movieName = imdbID;
+
+            string output = GetData($"http://www.omdbapi.com/?i={movieName}{apikey}");
+            MovieDB movie = new MovieDB(output);
+            return movie;
+        }
     }
 }

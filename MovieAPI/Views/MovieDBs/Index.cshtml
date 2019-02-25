@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<MovieAPI.Models.MovieDB>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Favorites";
 }
 
-<h2>Index</h2>
+<h2>Favorites</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -16,9 +16,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Year)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImdbID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Poster)
@@ -44,10 +41,7 @@
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ImdbID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Poster)
+            <img src="@Html.DisplayFor(modelItem => item.Poster)" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Genre)

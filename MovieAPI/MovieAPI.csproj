@@ -133,7 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MovieDBController.cs" />
+    <Compile Include="Controllers\MovieDBsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,11 +176,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\MovieDB\Create.cshtml" />
-    <Content Include="Views\MovieDB\Delete.cshtml" />
-    <Content Include="Views\MovieDB\Details.cshtml" />
-    <Content Include="Views\MovieDB\Edit.cshtml" />
-    <Content Include="Views\MovieDB\Index.cshtml" />
+    <Content Include="Views\MovieDBs\Create.cshtml" />
+    <Content Include="Views\MovieDBs\Delete.cshtml" />
+    <Content Include="Views\MovieDBs\Details.cshtml" />
+    <Content Include="Views\MovieDBs\Edit.cshtml" />
+    <Content Include="Views\MovieDBs\Index.cshtml" />
+    <Content Include="Views\MovieDBs\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,17 +10,17 @@ using MovieAPI.Models;
 
 namespace MovieAPI.Controllers
 {
-    public class MovieDBController : Controller
+    public class MovieDBsController : Controller
     {
         private FavoriteDBContext db = new FavoriteDBContext();
 
-        // GET: MovieDB
+        // GET: MovieDBs
         public ActionResult Index()
         {
             return View(db.Favorite.ToList());
         }
 
-        // GET: MovieDB/Details/5
+        // GET: MovieDBs/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,18 +35,18 @@ namespace MovieAPI.Controllers
             return View(movieDB);
         }
 
-        // GET: MovieDB/Create
+        // GET: MovieDBs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: MovieDB/Create
+        // POST: MovieDBs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Year,ImdbID,Poster,Genre,Metascore,Plot")] MovieDB movieDB)
+        public ActionResult Create([Bind(Include = "ID,Title,Year,Poster,Genre,Metascore,Plot")] MovieDB movieDB)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,15 @@ namespace MovieAPI.Controllers
             return View(movieDB);
         }
 
-        // GET: MovieDB/Edit/5
+        public ActionResult Favorites(string imdbID)
+        {
+            MovieDB movie = MovieDAL.GetMovie(imdbID);
+            db.Favorite.Add(movie);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // GET: MovieDBs/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,12 +81,12 @@ namespace MovieAPI.Controllers
             return View(movieDB);
         }
 
-        // POST: MovieDB/Edit/5
+        // POST: MovieDBs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,Year,ImdbID,Poster,Genre,Metascore,Plot")] MovieDB movieDB)
+        public ActionResult Edit([Bind(Include = "ID,Title,Year,Poster,Genre,Metascore,Plot")] MovieDB movieDB)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +97,7 @@ namespace MovieAPI.Controllers
             return View(movieDB);
         }
 
-        // GET: MovieDB/Delete/5
+        // GET: MovieDBs/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +112,7 @@ namespace MovieAPI.Controllers
             return View(movieDB);
         }
 
-        // POST: MovieDB/Delete/5
+        // POST: MovieDBs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -48,6 +48,8 @@ C:\git\MovieAPI\MovieAPI\bin\roslyn\vbc.rsp
 C:\git\MovieAPI\MovieAPI\bin\roslyn\VBCSCompiler.exe
 C:\git\MovieAPI\MovieAPI\bin\roslyn\VBCSCompiler.exe.config
 C:\git\MovieAPI\MovieAPI\bin\Antlr3.Runtime.dll
+C:\git\MovieAPI\MovieAPI\bin\EntityFramework.dll
+C:\git\MovieAPI\MovieAPI\bin\EntityFramework.SqlServer.dll
 C:\git\MovieAPI\MovieAPI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 C:\git\MovieAPI\MovieAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\git\MovieAPI\MovieAPI\bin\Microsoft.Web.Infrastructure.dll
@@ -61,6 +63,8 @@ C:\git\MovieAPI\MovieAPI\bin\System.Web.WebPages.Deployment.dll
 C:\git\MovieAPI\MovieAPI\bin\System.Web.WebPages.dll
 C:\git\MovieAPI\MovieAPI\bin\System.Web.WebPages.Razor.dll
 C:\git\MovieAPI\MovieAPI\bin\WebGrease.dll
+C:\git\MovieAPI\MovieAPI\bin\EntityFramework.xml
+C:\git\MovieAPI\MovieAPI\bin\EntityFramework.SqlServer.xml
 C:\git\MovieAPI\MovieAPI\bin\System.Web.Helpers.xml
 C:\git\MovieAPI\MovieAPI\bin\System.Web.Mvc.xml
 C:\git\MovieAPI\MovieAPI\bin\System.Web.Optimization.xml
@@ -77,8 +81,3 @@ C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csproj.CoreCompileInputs.cache
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csproj.CopyComplete
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.dll
 C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.pdb
-C:\git\MovieAPI\MovieAPI\bin\EntityFramework.xml
-C:\git\MovieAPI\MovieAPI\obj\Debug\MovieAPI.csprojAssemblyReference.cache
-C:\git\MovieAPI\MovieAPI\bin\EntityFramework.dll
-C:\git\MovieAPI\MovieAPI\bin\EntityFramework.SqlServer.dll
-C:\git\MovieAPI\MovieAPI\bin\EntityFramework.SqlServer.xml
