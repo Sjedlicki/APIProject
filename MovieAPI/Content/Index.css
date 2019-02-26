@@ -1,0 +1,14 @@
+﻿body {
+}
+
+#movieposter {
+    height: 200px;
+    float: right;
+    padding-bottom: 50px;
+    padding-right: 100px;
+}
+
+.info {
+    width: 40%;
+    float: left;
+}
