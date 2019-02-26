@@ -1,5 +1,7 @@
-﻿body {
-
+.cool {
+    background: url('../Image/pixel.png') no-repeat center center fixed;
+    background-size: cover;
+    image-rendering: pixelated;
 }
 #movieposter {
     height: 200px;
@@ -11,4 +13,35 @@
 .info {
     width: 40%;
     float: left;
+}
+
+#submitbutton {
+	position:relative;
+	top: 10px;
+	right:-424px;
+}
+#SearchByTitle {
+	text-align:center;
+}
+#SearchBar {
+	position:relative;
+	top: 10px;
+	right:-424px;
+}
+
+#CyaSkater {
+	position: relative;
+	right: 70px;
+}
+
+#ExplosionBall {
+	position: relative;
+	right: -800px;
+	top: -370px;
+	
+}
+
+.row {
+    background-color: beige;
+    border: 5px, solid ;
 }

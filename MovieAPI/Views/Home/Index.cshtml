@@ -3,36 +3,51 @@
 
 <link rel="stylesheet" href="../../Content/Index.css">
 
-@using (Html.BeginForm("Search", "Home", FormMethod.Post))
-{
-    <label for="Title" class="form-control">Search by title</label>
-    @Html.TextBox("Title", null, new { @class = "form-control" })
-    <input type="submit" class="form-control" />
-}
+<div class="cool">
 
-@{
-    int i = 0;
-}
-
-<p>Movie Count: @Model.Movies.Count</p>
-<div class="row">
-    @foreach (MovieDB item in Model.Movies)
+    @using (Html.BeginForm("Search", "Home", FormMethod.Post))
     {
-        if (i > 0 && i % 2 == 0)
-        {
-        @:</div><div class="row">
-        }
-        <div class="info col-md-6">
-            <p><img src="@item.Poster" id="movieposter" /></p>
-            <p>Title: @item.Title</p>
-            <p>Year: @item.Year</p>
-            <p>Genre: @item.Genre</p>
-            <p>Rating: @item.Metascore</p>
-            <p>Plot: @item.Plot</p>
-            <p><a href="/MovieDBs/GetOneMovie?ImdbID=@item.ImdbID">More details!</a></p>
-            <p><a href="/MovieDBs/Favorites?ImdbID=@item.ImdbID">Add to Favorites</a></p>
-        </div>
-        i++;
+
+        <h3 id="SearchByTitle">Search By Title</h3>
+
+        <input id="SearchBar" placeholder="Search Movies" @Html.TextBox("Title", null, new { @class = "form-control" })
+
+        <input id="submitbutton" type="submit" class="form-control" />
     }
+
+    @{
+        int i = 0;
+    }
+    @if (Model.Movies.Count != 0)
+    {
+        <p>Movie Count: @Model.Movies.Count</p>
+    }
+    else
+    {
+        <p id="CyaSkater"> <img src="~/Image/RIPSkatboard.gif" height="360" width="400" /> </p>
+        <p id="ExplosionBall"> <img src="~/Image/EXPLOSIONS.gif" height="360" width="400" /> </p>
+
+    }
+    <div class="row">
+
+        @foreach (MovieDB item in Model.Movies)
+        {
+            if (i > 0 && i % 2 == 0)
+            {
+            @:</div><div class="row">
+            }
+            <div class="info col-md-6">
+                <p><img src="@item.Poster" id="movieposter" /></p>
+                <p>Title: @item.Title</p>
+                <p>Year: @item.Year</p>
+                <p>Genre: @item.Genre</p>
+                <p>Rating: @item.Metascore</p>
+                <p>Plot: @item.Plot</p>
+                <p><a href="/MovieDBs/GetOneMovie?ImdbID=@item.ImdbID">More details!</a></p>
+                <p><a href="/MovieDBs/Favorites?ImdbID=@item.ImdbID">Add to Favorites</a></p>
+            </div>
+            i++;
+        }
+    </div>
 </div>
 
