@@ -8,10 +8,10 @@
 
 <h2>Favorites</h2>
 
-<<<<<<< HEAD
-=======
+<div id="home">@Html.ActionLink("Search", "Index", "Home")</div>
 
->>>>>>> c945585d3fd79657bf2f71420266a18f2890cd6c
+<div id="DeleteFav">@Html.ActionLink("Delete All", "DeleteAll", new { @id = "DeleteFav" })</div>
+
 <table class="table">
     <tr>
         <th>
@@ -35,30 +35,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Year)
-        </td>
-        <td>
-            <img src="@Html.DisplayFor(modelItem => item.Poster)" id="thumb" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Genre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Metascore)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Plot)
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.Poster)" id="thumb" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metascore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plot)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "DeleteConfirm", new { id = item.ID })
+            </td>
+        </tr>
+    }
 </table>
