@@ -29,8 +29,10 @@
             <p>Genre: @item.Genre</p>
             <p>Rating: @item.Metascore</p>
             <p>Plot: @item.Plot</p>
+            <p><a href="/MovieDBs/GetOneMovie?ImdbID=@item.ImdbID">More details!</a></p>
             <p><a href="/MovieDBs/Favorites?ImdbID=@item.ImdbID">Add to Favorites</a></p>
         </div>
         i++;
     }
 </div>
+

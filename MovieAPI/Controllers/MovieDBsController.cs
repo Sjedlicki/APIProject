@@ -65,7 +65,20 @@ namespace MovieAPI.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult GetOneMovie(string imdbID)
+        {
+            MovieDB movie = MovieDAL.GetMovie(imdbID);
+            ViewBag.Title = movie.Title;
+            ViewBag.Meta = movie.Metascore;
+            ViewBag.Plot = movie.Plot;
+            ViewBag.Poster = movie.Poster;
+            ViewBag.Year = movie.Year;
+            ViewBag.Genre = movie.Genre;
+            ViewBag.IMDB = movie.ImdbID;
 
+            return View("OneMovie");
+
+        }
         // GET: MovieDBs/Edit/5
         public ActionResult Edit(int? id)
         {
