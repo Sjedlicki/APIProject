@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<MovieAPI.Models.MovieDB>
-
+<link rel="stylesheet" href="../../Content/Favorites.css">
 @{
     ViewBag.Title = "Favorites";
 }
@@ -39,7 +39,7 @@
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            <img src="@Html.DisplayFor(modelItem => item.Poster)" />
+            <img src="@Html.DisplayFor(modelItem => item.Poster)" id="thumb" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Genre)
@@ -50,9 +50,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.Plot)
         </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+		<td>
+			@Html.ActionLink("Delete", "Delete", new { id = item.ID })
+			
+		</td>
     </tr>
 }
 
