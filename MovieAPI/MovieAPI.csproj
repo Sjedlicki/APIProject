@@ -162,6 +162,7 @@
     <Content Include="Images\favButton1.png" />
     <Content Include="Images\favButton2.png" />
     <Content Include="Image\404d.png" />
+    <Content Include="Image\movie.jpg" />
     <Content Include="obj\Debug\MovieAPI.csproj.FileListAbsolute.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

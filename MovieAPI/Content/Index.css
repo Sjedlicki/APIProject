@@ -1,5 +1,7 @@
 ﻿body {
-    background: url(../)
+    background: url(../Image/moviebackground.jpg) no-repeat center center fixed;
+    background-size: cover;
+
 }
 #movieposter {
     height: 200px;
@@ -11,4 +13,9 @@
 .info {
     width: 40%;
     float: left;
+}
+
+.row {
+    background-color: beige;
+    border: 5px, solid blue;
 }
