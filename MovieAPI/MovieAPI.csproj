@@ -161,6 +161,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Image\404d.png" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <Content Include="Image\movie.jpg" />
+    <Content Include="Image\moviebackground.jpg" />
+>>>>>>> origin/Mauricio
     <Content Include="obj\Debug\MovieAPI.csproj.FileListAbsolute.txt" />
 =======
     <Content Include="Image\EXPLOSIONS.gif" />
