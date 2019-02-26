@@ -6,3 +6,21 @@
     height: 100px;
     width: auto;
 }
+
+#home {
+    color: gold;
+    text-decoration-color: gold;
+    font-family:Verdana;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 5px;
+    width: 10%;
+
+}
+
+#DeleteFav {
+    font-family: cursive;
+    font-size: 20px;
+}
+
+

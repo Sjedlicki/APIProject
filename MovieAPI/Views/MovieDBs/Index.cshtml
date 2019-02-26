@@ -8,6 +8,10 @@
 
 <h2>Favorites</h2>
 
+<div id="home">@Html.ActionLink("Search", "Index", "Home")</div>
+
+<div id="DeleteFav">@Html.ActionLink("Delete All", "DeleteAll", new { @id = "DeleteFav" })</div>
+
 <table class="table">
     <tr>
         <th>
@@ -53,11 +57,8 @@
                 @Html.DisplayFor(modelItem => item.Plot)
             </td>
             <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.ActionLink("Delete", "DeleteConfirm", new { id = item.ID })
             </td>
         </tr>
     }
-
-        @Html.ActionLink("Delete All", "DeleteAll")
-
 </table>
