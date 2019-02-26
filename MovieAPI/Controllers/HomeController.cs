@@ -9,8 +9,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data;
 
-
-
 namespace MovieAPI.Controllers
 {
     public class HomeController : Controller
@@ -24,37 +22,31 @@ namespace MovieAPI.Controllers
 
         public ActionResult Search(MovieModel model)
         {
-<<<<<<< HEAD
+            if (model.Title == null)
+            {
+                ViewBag.Error = "No title, try again!";
+                return View("Error");
+            }
 
-            model.Movies = MovieDAL.SearchByTitle(model.Title);
-=======
-			if (model.Title == null)
-			{
-				ViewBag.Error = "No title, try again!";
-				return View("Error");
-			}
-			
-			else
-			{
-				model.Movies = MovieDAL.SearchByTitle(model.Title);
-				if (model.Movies.Count != 0)
-				{
-					return View("Index", model);
-				}
-				else
-				{
-					ViewBag.Error = "That's just a buncha fuckin jibberish";
-					return View("Error");
-				}
->>>>>>> c945585d3fd79657bf2f71420266a18f2890cd6c
+            else
+            {
+                model.Movies = MovieDAL.SearchByTitle(model.Title);
+                if (model.Movies.Count != 0)
+                {
+                    return View("Index", model);
+                }
+                else
+                {
+                    ViewBag.Error = "That's just a buncha fuckin jibberish";
+                    return View("Error");
+                }
+            }
+        }
 
-				}
-			}
-
-		public ActionResult Error()
-		{
-			ViewBag.Error = "Please input a title!";
-			return View();
-		}
+        public ActionResult Error()
+        {
+            ViewBag.Error = "Please input a title!";
+            return View();
+        }
     }
 }
