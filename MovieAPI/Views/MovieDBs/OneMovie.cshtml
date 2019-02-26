@@ -1,0 +1,12 @@
+﻿@model MovieAPI.Models.MovieDB
+
+<p><img src="@ViewBag.Poster" width="300" height="360" /><div id="plot">@ViewBag.Plot</div></p>
+<h2 id="title">@ViewBag.Title</h2>
+<div id="theBody">
+	<p>Genre: @ViewBag.Genre</p>
+	<p>Metascore: @ViewBag.Meta</p>
+	<p>Year: @ViewBag.Year</p>
+</div>
+<p id="desc">Description</p>
+
+<p><a href="/MovieDBs/Favorites?ImdbID=@ViewBag.IMDB">Add to Favorites</a></p>
