@@ -10,7 +10,7 @@ using System.Web.Mvc;
 using System.Data;
 
 namespace MovieAPI.Controllers
-{
+{   
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -50,4 +50,3 @@ namespace MovieAPI.Controllers
         }
     }
 }
-//yeet
