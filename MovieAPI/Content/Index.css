@@ -1,7 +1,7 @@
 ﻿body {
-    background: url(../Image/moviebackground.jpg) no-repeat center center fixed;
+    background: url(../Image/pixel.png) no-repeat center center fixed;
     background-size: cover;
-
+    image-rendering: pixelated;
 }
 #movieposter {
     height: 200px;
@@ -13,9 +13,10 @@
 .info {
     width: 40%;
     float: left;
+    color: red;
 }
 
 .row {
     background-color: beige;
-    border: 5px, solid blue;
+    border: 5px, solid ;
 }
