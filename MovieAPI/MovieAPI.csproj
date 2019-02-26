@@ -159,11 +159,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-<<<<<<< HEAD
-    <Content Include="Images\favButton1.png" />
-    <Content Include="Images\favButton2.png" />
-=======
->>>>>>> faf4ccaf1e4e75d0a7a304bbd2d58f6c6f3f18a9
     <Content Include="Image\404d.png" />
     <Content Include="obj\Debug\MovieAPI.csproj.FileListAbsolute.txt" />
     <Content Include="Scripts\bootstrap.js" />
@@ -197,6 +192,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\MovieDBs\Create.cshtml" />
+    <Content Include="Views\MovieDBs\Delete.cshtml" />
+    <Content Include="Views\MovieDBs\Details.cshtml" />
+    <Content Include="Views\MovieDBs\Edit.cshtml" />
+    <Content Include="Views\MovieDBs\Error.cshtml" />
     <Content Include="Views\MovieDBs\Index.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\MovieDBs\OneMovie.cshtml" />
