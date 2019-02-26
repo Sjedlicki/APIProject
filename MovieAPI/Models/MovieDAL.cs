@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using Newtonsoft.Json.Linq;
+using MovieAPI.Controllers;
 
 namespace MovieAPI.Models
 {
@@ -25,24 +26,32 @@ namespace MovieAPI.Models
 
         public static List<MovieDB> SearchByTitle(string titled)
         {
+			
             string title = titled.Trim();
             List<MovieDB> results = new List<MovieDB>();
-
             string apikey = "&apikey=e3c05793";
             string output = GetData($"http://www.omdbapi.com/?s={title}{apikey}");            
             JToken token = JToken.Parse(output);
+			if (output == "{\"Response\":\"False\",\"Error\":\"Movie not found!\"}")
+			{
+				GetOut();
+			}
+			else
+			{
+				var list = token.SelectToken("Search");
 
-            var list = token.SelectToken("Search");
-
-            int i = 0;
-            foreach (var item in list)
-            {
-                string imdbd = token["Search"][i]["imdbID"].ToString();
-                MovieDB movie = GetMovie(imdbd);
-                results.Add(movie);
-                i++;
-            }
-            return results;
+				int i = 0;
+				foreach (var item in list)
+				{
+					string imdbd = token["Search"][i]["imdbID"].ToString();
+					MovieDB movie = GetMovie(imdbd);
+					results.Add(movie);
+					i++;
+				}
+				return results;
+			}
+			
+			return results;
         }
 
         public static MovieDB GetMovie(string imdbID)
@@ -55,5 +64,11 @@ namespace MovieAPI.Models
             MovieDB movie = new MovieDB(output);
             return movie;
         }
+
+		public static void GetOut()
+		{
+			HomeController hc = new HomeController();
+			hc.Error();
+		}
     }
 }
