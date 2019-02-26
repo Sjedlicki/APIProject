@@ -125,6 +125,16 @@ namespace MovieAPI.Controllers
             return View(movieDB);
         }
 
+        public ActionResult DeleteAll()
+        {
+            foreach (MovieDB movieDB in db.Favorite)
+            {
+                db.Favorite.Remove(movieDB);                
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         // POST: MovieDBs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
