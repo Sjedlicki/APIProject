@@ -29,7 +29,7 @@ namespace MovieAPI.Models
             List<MovieDB> results = new List<MovieDB>();
 
             string apikey = "&apikey=e3c05793";
-            string output = GetData($"http://www.omdbapi.com/?s={title}{apikey}");            
+            string output = GetData($"http://www.omdbapi.com/?s={title}{apikey}");
             JToken token = JToken.Parse(output);
 
             var list = token.SelectToken("Search");

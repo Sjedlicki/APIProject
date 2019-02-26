@@ -24,6 +24,7 @@ namespace MovieAPI.Controllers
 
         public ActionResult Search(MovieModel model)
         {
+
             model.Movies = MovieDAL.SearchByTitle(model.Title);
 
             return View("Index", model);
