@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-﻿body {
-<<<<<<< HEAD
-=======
-﻿
->>>>>>> origin/Ron
-
-=======
-    background: url(../Image/pixel.png) no-repeat center center fixed;
+.cool {
+    background: url('../Image/pixel.png') no-repeat center center fixed;
     background-size: cover;
     image-rendering: pixelated;
->>>>>>> origin/Mauricio
 }
 #movieposter {
     height: 200px;
@@ -21,7 +13,6 @@
 .info {
     width: 40%;
     float: left;
-<<<<<<< HEAD
 }
 
 #submitbutton {
@@ -49,12 +40,8 @@
 	top: -370px;
 	
 }
-=======
-    color: red;
-}
 
 .row {
     background-color: beige;
     border: 5px, solid ;
 }
->>>>>>> origin/Mauricio

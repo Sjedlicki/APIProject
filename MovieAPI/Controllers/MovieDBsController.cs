@@ -67,7 +67,6 @@ namespace MovieAPI.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-		
+        }		
     }
 }
