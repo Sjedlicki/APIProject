@@ -1,24 +1,28 @@
 ﻿@model MovieAPI.Models.MovieModel
 @using MovieAPI.Models;
 
+
+<link rel="stylesheet" href="../../Content/Index.css">
+
+
 @using (Html.BeginForm("Search", "Home", FormMethod.Post))
 {
 	<label for="Title" class="form-control">Search by title</label>
 	@Html.TextBox("Title", null, new { @class = "form-control" })
 	<input type="submit" class="form-control" />
 }
+
 <p>Movie Count: @Model.Movies.Count</p>
 @foreach (MovieDB item in Model.Movies)
 {
-	<div class="form-group">
-		<p>Title: @item.Title</p>
-		<p>Year: @item.Year</p>
-		<p>Genre: @item.Genre</p>
-		<p>Rating: @item.Metascore</p>
-		<p>Poster: <img src="@item.Poster" /></p>
-		<p>Plot: @item.Plot</p>
-	</div>
-	<p><a href="/MovieDBs/GetOneMovie?ImdbID=@item.ImdbID">More details!</a></p>
-	<p><a href="/MovieDBs/Favorites?ImdbID=@item.ImdbID">Add to Favorites</a></p>
+    <div class="info">
+        <p><img src="@item.Poster" id="movieposter"/></p>
+        <p>Title: @item.Title</p>
+        <p>Year: @item.Year</p>
+        <p>Genre: @item.Genre</p>
+        <p>Rating: @item.Metascore</p>        
+        <p>Plot: @item.Plot</p>
+    </div>
+    <p><a href="/MovieDBs/GetOneMovie?ImdbID=@item.ImdbID">More details!</a></p>
+    <a href="/MovieDBs/Favorites?ImdbID=@item.ImdbID">Add to Favorites</a>
 }
-
