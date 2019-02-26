@@ -8,7 +8,9 @@
 
 <h2>Favorites</h2>
 
-<div id="home">@Html.ActionLink("Search", "Index", "Home")</div>
+<form action="~/Home/Index" id="button">
+    <input type="submit" class="button" value="Home"/>
+</form>
 
 <div id="DeleteFav">@Html.ActionLink("Delete All", "DeleteAll", new { @id = "DeleteFav" })</div>
 

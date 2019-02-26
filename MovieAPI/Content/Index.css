@@ -1,6 +1,5 @@
 .cool {
     background: url('../Image/pixel.png') no-repeat center center fixed;
-    background-size: cover;
     image-rendering: pixelated;
 }
 #movieposter {
