@@ -29,12 +29,22 @@ namespace MovieAPI.Controllers
 				ViewBag.Error = "No title, try again!";
 				return View("Error");
 			}
+			
 			else
 			{
 				model.Movies = MovieDAL.SearchByTitle(model.Title);
-				return View("Index", model);
+				if (model.Movies.Count != 0)
+				{
+					return View("Index", model);
+				}
+				else
+				{
+					ViewBag.Error = "That's just a buncha fuckin jibberish";
+					return View("Error");
+				}
+
+				}
 			}
-        }
 
 		public ActionResult Error()
 		{
