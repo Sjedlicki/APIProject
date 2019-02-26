@@ -31,30 +31,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Year)
-        </td>
-        <td>
-            <img src="@Html.DisplayFor(modelItem => item.Poster)" id="thumb" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Genre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Metascore)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Plot)
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.Poster)" id="thumb" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metascore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plot)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+        @Html.ActionLink("Delete All", "DeleteAll")
 
 </table>
