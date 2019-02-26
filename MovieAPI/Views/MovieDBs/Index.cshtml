@@ -4,8 +4,9 @@
     ViewBag.Title = "Favorites";
 }
 
-<h2>Favorites</h2>
+<link rel="stylesheet" href="../../Content/Favorites.css">
 
+<h2>Favorites</h2>
 
 <table class="table">
     <tr>
@@ -39,7 +40,7 @@
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            <img src="@Html.DisplayFor(modelItem => item.Poster)" />
+            <img src="@Html.DisplayFor(modelItem => item.Poster)" id="thumb" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Genre)
