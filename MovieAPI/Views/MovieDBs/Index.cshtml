@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<MovieAPI.Models.MovieDB>
-
+<link rel="stylesheet" href="../../Content/Favorites.css">
 @{
     ViewBag.Title = "Favorites";
 }
@@ -35,6 +35,7 @@
         <th></th>
     </tr>
 
+<<<<<<< HEAD
     @foreach (var item in Model)
     {
         <tr>
@@ -62,3 +63,33 @@
         </tr>
     }
 </table>
+=======
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            <img src="@Html.DisplayFor(modelItem => item.Poster)" id="thumb" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Metascore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plot)
+        </td>
+		<td>
+			@Html.ActionLink("Delete", "Delete", new { id = item.ID })
+			
+		</td>
+    </tr>
+}
+
+</table>
+>>>>>>> origin/Ron

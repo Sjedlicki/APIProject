@@ -160,7 +160,12 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\404d.png" />
+<<<<<<< HEAD
     <Content Include="obj\Debug\MovieAPI.csproj.FileListAbsolute.txt" />
+=======
+    <Content Include="Image\EXPLOSIONS.gif" />
+    <Content Include="Image\RIPSkatboard.gif" />
+>>>>>>> origin/Ron
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -192,13 +197,17 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\MovieDBs\Create.cshtml" />
     <Content Include="Views\MovieDBs\Delete.cshtml" />
     <Content Include="Views\MovieDBs\Details.cshtml" />
     <Content Include="Views\MovieDBs\Edit.cshtml" />
     <Content Include="Views\MovieDBs\Error.cshtml" />
     <Content Include="Views\MovieDBs\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Home\Error.cshtml" />
+=======
+>>>>>>> origin/Ron
     <Content Include="Views\MovieDBs\OneMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -16,12 +16,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Movie API", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                   <li>@Html.ActionLink("Favorites", "Index", "MovieDBs")</li>
-                </ul>
+				<ul class="nav navbar-nav">
+					<li>@Html.ActionLink("Search for movies", "Index", "Home")</li>
+					<li>@Html.ActionLink("Favorites", "Index", "MovieDBs")</li>
+				</ul>
             </div>
         </div>
     </div>
