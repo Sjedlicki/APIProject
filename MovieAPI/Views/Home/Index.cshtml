@@ -13,10 +13,7 @@
 @{
     int i = 0;
 }
-@if (Model.Movies.Count == 0)
-{
-}
-else
+@if (Model.Movies.Count != 0)
 {
 <p>Movie Count: @Model.Movies.Count</p>
 }
