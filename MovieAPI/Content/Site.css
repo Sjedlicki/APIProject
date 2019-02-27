@@ -16,6 +16,7 @@ textarea {
     max-width: 280px;
 }
 
+<<<<<<< HEAD
 .TitlePlot {
     display: block;
     position: relative;
@@ -27,12 +28,18 @@ textarea {
 #title{
     position: relative;
     bottom: 300px;
+=======
+#TitlePlot {
+    position: relative;
+    top: 50px;
+>>>>>>> e6300c8b308b5b4adb55a5988a0105eaf33517ed
 }
 
 #desc {
     text-align: center;
     position: relative;
     top: -300px;
+<<<<<<< HEAD
     right: 170px;
 }
 
@@ -50,6 +57,17 @@ textarea {
     bottom: 75px;
     width: 300px;
     
+=======
+    font-size: .5in;
+    padding-right: 2in;
+    padding-left: 2in;
+}
+
+#theBody {
+    position: relative;
+    top: -150px;
+    font-size: .2in;
+>>>>>>> e6300c8b308b5b4adb55a5988a0105eaf33517ed
 }
 
 #Error {
@@ -60,6 +78,10 @@ textarea {
 #ErrorImage {
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
+=======
+    /*background: url('../Image/404d.png');*/
+>>>>>>> e6300c8b308b5b4adb55a5988a0105eaf33517ed
     position: relative;
     top: -300px;
 }
@@ -67,6 +89,7 @@ textarea {
 #GOHOME {
     font-size: 1in;
     text-align: center;
+<<<<<<< HEAD
     font-size: 1in;
     text-align: center;
 }
@@ -79,4 +102,16 @@ textarea {
 #JustAPoster {
     position: relative;
     top: 100px;
+=======
+}
+
+#OneMovie {
+    position: relative;
+    top: 40px;
+}
+
+#JustAPoster {
+    position: relative;
+    top: -20px;
+>>>>>>> e6300c8b308b5b4adb55a5988a0105eaf33517ed
 }

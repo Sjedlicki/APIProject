@@ -2,16 +2,27 @@
 <link rel="stylesheet" href="../../Content/Site.css">
 <div id="OneMovie">
     <img src="@ViewBag.Poster" width="300" height="360" id="JustAPoster" />
+<<<<<<< HEAD
     <div class="TitlePlot">
         <h2 id="title">@ViewBag.Title</h2>
         <h3 id="desc">Description</h3>
+=======
+    <div id="TitlePlot">
+        <h2 id="title">@ViewBag.Title</h2>
+        <p id="desc">Description</p>
+>>>>>>> e6300c8b308b5b4adb55a5988a0105eaf33517ed
         <p id="plot">@ViewBag.Plot</p>
     </div>
     <div id="theBody">
         <p>Genre: @ViewBag.Genre</p>
         <p>Metascore: @ViewBag.Meta</p>
         <p>Year: @ViewBag.Year</p>
+<<<<<<< HEAD
         <p><a href="/MovieDBs/Favorites?ImdbID=@ViewBag.IMDB">Add to Favorites</a></p>
     </div>
 
+=======
+    </div>
+    <p><a href="/MovieDBs/Favorites?ImdbID=@ViewBag.IMDB">Add to Favorites</a></p>
+>>>>>>> e6300c8b308b5b4adb55a5988a0105eaf33517ed
 </div>
