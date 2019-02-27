@@ -2,6 +2,7 @@
     background: url('../Image/pixel.png') no-repeat center center fixed;
     image-rendering: pixelated;
 }
+
 #movieposter {
     height: 200px;
     float: right;
@@ -21,6 +22,7 @@
 }
 #SearchByTitle {
 	text-align:center;
+    right: 200px;
 }
 #SearchBar {
 	position:relative;
