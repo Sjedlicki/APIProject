@@ -9,10 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data;
 
-
-
 namespace MovieAPI.Controllers
-{
+{   
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -29,7 +27,7 @@ namespace MovieAPI.Controllers
 				ViewBag.Error = "No title, try again!";
 				return View("Error");
 			}
-			
+
 			else
 			{
 				model.Movies = MovieDAL.SearchByTitle(model.Title);
@@ -42,14 +40,13 @@ namespace MovieAPI.Controllers
 					ViewBag.Error = "No movie title with that name.";
 					return View("Error");
 				}
-
-				}
 			}
+        }
 
-		public ActionResult Error()
-		{
-			ViewBag.Error = "Please input a title!";
-			return View();
-		}
+        public ActionResult Error()
+        {
+            ViewBag.Error = "Please input a title!";
+            return View();
+        }
     }
 }

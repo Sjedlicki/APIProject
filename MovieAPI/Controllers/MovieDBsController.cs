@@ -20,44 +20,6 @@ namespace MovieAPI.Controllers
             return View(db.Favorite.ToList());
         }
 
-        // GET: MovieDBs/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            MovieDB movieDB = db.Favorite.Find(id);
-            if (movieDB == null)
-            {
-                return HttpNotFound();
-            }
-            return View(movieDB);
-        }
-
-        // GET: MovieDBs/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: MovieDBs/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Year,Poster,Genre,Metascore,Plot")] MovieDB movieDB)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Favorite.Add(movieDB);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(movieDB);
-        }
-
         public ActionResult Favorites(string imdbID)
         {
             MovieDB movie = MovieDAL.GetMovie(imdbID);
@@ -65,70 +27,32 @@ namespace MovieAPI.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-		public ActionResult GetOneMovie(string imdbID)
-		{
-			MovieDB movie = MovieDAL.GetMovie(imdbID);
-			ViewBag.Title = movie.Title;
-			ViewBag.Meta = movie.Metascore;
-			ViewBag.Plot = movie.Plot;
-			ViewBag.Poster = movie.Poster;
-			ViewBag.Year = movie.Year;
-			ViewBag.Genre = movie.Genre;
-			ViewBag.IMDB = movie.ImdbID;
 
-			return View("OneMovie");
-
-		}
-			// GET: MovieDBs/Edit/5
-			public ActionResult Edit(int? id)
+        public ActionResult GetOneMovie(string imdbID)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            MovieDB movieDB = db.Favorite.Find(id);
-            if (movieDB == null)
-            {
-                return HttpNotFound();
-            }
-            return View(movieDB);
+            MovieDB movie = MovieDAL.GetMovie(imdbID);
+            ViewBag.Title = movie.Title;
+            ViewBag.Meta = movie.Metascore;
+            ViewBag.Plot = movie.Plot;
+            ViewBag.Poster = movie.Poster;
+            ViewBag.Year = movie.Year;
+            ViewBag.Genre = movie.Genre;
+            ViewBag.IMDB = movie.ImdbID;
+
+            return View("OneMovie");
         }
 
-        // POST: MovieDBs/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,Year,Poster,Genre,Metascore,Plot")] MovieDB movieDB)
+        public ActionResult DeleteAll()
         {
-            if (ModelState.IsValid)
+            foreach (MovieDB movieDB in db.Favorite)
             {
-                db.Entry(movieDB).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                db.Favorite.Remove(movieDB);
             }
-            return View(movieDB);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
-        // GET: MovieDBs/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            MovieDB movieDB = db.Favorite.Find(id);
-            if (movieDB == null)
-            {
-                return HttpNotFound();
-            }
-            return View(movieDB);
-        }
-
-        // POST: MovieDBs/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirm(int id)
         {
             MovieDB movieDB = db.Favorite.Find(id);
             db.Favorite.Remove(movieDB);
@@ -143,7 +67,6 @@ namespace MovieAPI.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-		
+        }		
     }
 }

@@ -1,4 +1,44 @@
-﻿#thumb {
-	height:100px;
-	width:auto;
+﻿body {
+    background-color: lightblue;
+}
+
+#thumb {
+    height: 100px;
+    width: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: whitesmoke;
+    background-color: darkslategray;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    align-content: center;
+    position: relative;
+    left: 520px;
+}
+
+.button:hover {
+     background-color: black;
+     color: purple;
+}
+
+    .button:active {
+        background-color: black;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+#DeleteFav {
+    font-family: cursive;
+    font-size: 20px;
+    text-shadow: 2px gold 2px gold 5px green;
+    text-align: right;
 }
