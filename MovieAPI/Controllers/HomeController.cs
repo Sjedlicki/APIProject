@@ -39,7 +39,7 @@ namespace MovieAPI.Controllers
 				}
 				else
 				{
-					ViewBag.Error = "That's just a buncha fuckin jibberish";
+					ViewBag.Error = "No movie title with that name.";
 					return View("Error");
 				}
 
