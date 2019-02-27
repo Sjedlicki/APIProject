@@ -1,12 +1,16 @@
 ﻿@model MovieAPI.Models.MovieDB
-
-<p><img src="@ViewBag.Poster" width="300" height="360" id="JustAPoster" /><div id="plot">@ViewBag.Plot</div></p>
-<h2 id="title">@ViewBag.Title</h2>
-<div id="theBody">
-	<p>Genre: @ViewBag.Genre</p>
-	<p>Metascore: @ViewBag.Meta</p>
-	<p>Year: @ViewBag.Year</p>
+<link rel="stylesheet" href="../../Content/Site.css">
+<div id="OneMovie">
+    <img src="@ViewBag.Poster" width="300" height="360" id="JustAPoster" />
+    <div id="TitlePlot">
+        <h2 id="title">@ViewBag.Title</h2>
+        <p id="desc">Description</p>
+        <p id="plot">@ViewBag.Plot</p>
+    </div>
+    <div id="theBody">
+        <p>Genre: @ViewBag.Genre</p>
+        <p>Metascore: @ViewBag.Meta</p>
+        <p>Year: @ViewBag.Year</p>
+    </div>
+    <p><a href="/MovieDBs/Favorites?ImdbID=@ViewBag.IMDB">Add to Favorites</a></p>
 </div>
-<p id="desc">Description</p>
-
-<p><a href="/MovieDBs/Favorites?ImdbID=@ViewBag.IMDB">Add to Favorites</a></p>
